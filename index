@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Huang - Personal Website</title>
+  <style>
+    :root {
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --text-color: #222222;
+      --link-color: #0366d6;
+      --award-color: #b33a00;
+      --bg-color: #ffffff;
+      --max-width: 820px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: var(--font-main);
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Header Profile */
+    .header-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 30px;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .header-text .subtitle {
+      font-size: 1.1rem;
+      color: #555555;
+      margin-bottom: 16px;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #e1e4e8;
+      background-color: #f6f8fa;
+    }
+
+    /* Navigation Jump Links */
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 24px 0 36px 0;
+      padding: 10px 0;
+      border-top: 1px solid #eaecef;
+      border-bottom: 1px solid #eaecef;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Headings */
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 6px;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    h3.year-heading {
+      font-size: 1.1rem;
+      color: #666666;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Highlight Banner */
+    .highlight-box {
+      background-color: #fff9f5;
+      border-left: 4px solid var(--award-color);
+      padding: 12px 16px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box strong {
+      color: var(--award-color);
+    }
+
+    /* Publication Entries */
+    .pub-entry {
+      margin-bottom: 20px;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: #111111;
+      display: block;
+    }
+
+    .pub-authors {
+      font-size: 0.95rem;
+      color: #333333;
+    }
+
+    .pub-venue {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #555555;
+    }
+
+    .pub-award {
+      color: var(--award-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    .pub-links {
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+
+    .pub-links a {
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    /* Lists */
+    ul {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eaecef;
+      font-size: 0.85rem;
+      color: #6a737d;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .header-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-photo {
+        width: 140px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header / About Intro -->
+    <header class="header-section">
+      <div class="header-text">
+        <h1>Arthur Huang, Ph.D.</h1>
+        <div class="subtitle">Associate Professor | Interdisciplinary Researcher</div>
+        <p>
+          My research explores the convergence of artificial intelligence, human behavior, smart cities, and resilient systems. I investigate data-driven methodologies to inform sustainable operations, service innovation, and technological decision-making.
+        </p>
+        <p>
+          I direct interdisciplinary initiatives spanning AI-driven modeling, cybersecurity resilience, and advanced computing applications.
+        </p>
+      </div>
+      <!-- Replace 'profile.jpg' with your photo uploaded to GitHub -->
+      <img src="profile.jpg" alt="Arthur Huang" class="profile-photo" onerror="this.src='https://via.placeholder.com/170x220?text=Photo';">
+    </header>
+
+    <!-- Quick Navigation Bar -->
+    <ul class="nav-links">
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#bio">Biographical Sketch</a></li>
+      <li><a href="#students">Prospective Students</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- News / Highlights Callout -->
+    <div class="highlight-box">
+      <strong>Recent Announcement:</strong> Looking for motivated graduate students interested in artificial intelligence, resilient networks, and data analytics. Review the <a href="#students">prospective students section</a> for details.
+    </div>
+
+    <!-- Publications Section -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <h3 class="year-heading">2026</h3>
+      <div class="pub-entry">
+        <span class="pub-title">Agentic AI and Behavioral Decision Dynamics in Autonomous Systems</span>
+        <div class="pub-authors"><strong>Arthur Huang</strong>, Co-Author One, Co-Author Two</div>
+        <div class="pub-venue">Journal of Emerging Technologies & Systems, 2026</div>
+        <div class="pub-links">
+          <a href="#">[PDF]</a>
+          <a href="#">[Project]</a>
+          <a href="#">[Code]</a>
+        </div>
+      </div>
+
+      <h3 class="year-heading">2025</h3>
+      <div class="pub-entry">
+        <span class="pub-title">Computational Frameworks for Urban Resilience and Disaster Incident Response</span>
+        <div class="pub-authors"><strong>Arthur Huang</strong>, Research Collaborator</div>
+        <div class="pub-venue">IEEE Transactions on Intelligent Systems, 2025</div>
+        <div class="pub-award">★ Best Paper Award</div>
+        <div class="pub-links">
+          <a href="#">[PDF]</a>
+          <a href="#">[Data]</a>
+        </div>
+      </div>
+
+      <h3 class="year-heading">2024</h3>
+      <div class="pub-entry">
+        <span class="pub-title">Human-Centered Data Science: Modeling Complex Visitor Flows and Network Dynamics</span>
+        <div class="pub-authors">Graduate Student, <strong>Arthur Huang</strong></div>
+        <div class="pub-venue">ACM / Springer Smart Cities & Informatics, 2024</div>
+        <div class="pub-links">
+          <a href="#">[PDF]</a>
+          <a href="#">[Supplemental]</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul>
+        <li><strong>AI and Emerging Technologies</strong> (Fall 2026)</li>
+        <li><strong>Data Analytics & Computational Modeling</strong> (Spring 2026)</li>
+        <li><strong>Engineering Education & STEM Workforce Innovation</strong> (Fall 2025)</li>
+        <li><strong>Resilience Engineering and Incident Response</strong> (Spring 2025)</li>
+      </ul>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio">
+      <h2>Biographical Sketch</h2>
+      <p>
+        Arthur Huang is an Associate Professor conducting interdisciplinary research at the intersection of AI, complex networks, urban informatics, and organizational resilience. His investigations focus on deploying computational techniques to address real-world socio-technical challenges.
+      </p>
+      <p>
+        Prior to his current position, he completed his doctoral training and advanced studies focusing on systems modeling, data governance, and optimization. He has authored peer-reviewed articles across premier venues in intelligent systems, service computing, and smart infrastructure.
+      </p>
+    </section>
+
+    <!-- Prospective Students Section -->
+    <section id="students">
+      <h2>Prospective Students</h2>
+      <p>
+        I am always interested in recruiting dedicated, curious students with strong computational, analytical, or systems modeling backgrounds. If you are applying to join our research team, please review our recent publications and email me with your CV, academic transcript, and a brief statement outlining how your specific research goals align with our projects.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong> your-email@university.edu<br>
+        <strong>Office:</strong> Academic Building, Room 400<br>
+        <strong>Profiles:</strong> 
+        <a href="https://scholar.google.com" target="_blank">Google Scholar</a> | 
+        <a href="https://github.com" target="_blank">GitHub</a> | 
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>&copy; 2026 Arthur Huang</span>
+      <span>Hosted on GitHub Pages</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
